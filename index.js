@@ -11,6 +11,7 @@ function largestSubarraySum(arr) {
     } else if (inNeg && arr[i] < 0) {
       inNeg = false
     } else {
+      consoel.log("adding: ", arr[i])
       sum += arr[i]
     }
 
