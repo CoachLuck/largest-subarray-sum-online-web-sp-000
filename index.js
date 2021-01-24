@@ -11,15 +11,15 @@ function search(arr, canAdd, idx) {
   let next = arr[idx + 1]
 
   if ((cur < 0 && canAdd)) {
+    console.log(cur)
+    console.log(arr)
     search(arr, false, idx + 1)
   }
   if (cur > 0 && !canAdd) {
+    console.log(cur)
+    console.log(arr)
     search(arr, canAdd, idx + 1)
   }
-
-  console.log(cur)
-  console.log(arr)
-
 }
 
 // function search(arr, re, idx) {
