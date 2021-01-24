@@ -12,28 +12,25 @@ function search(arr, nums, canAdd, idx) {
   let prev = arr[idx - 1]
   let cur = arr[idx]
   let next = arr[idx + 1]
-  let possibleAdd = nums
   if ((cur < 0 && canAdd)) {
-//    console.log("Odd enter:", cur)
+    // negative and can add
     if (arr.length - 1 == idx) {
-      possibleAdd.push(cur)
+      nums.push(cur)
     } else {
-      search(arr, possibleAdd, false, idx + 1)
+      search(arr, nums, false, idx + 1)
     }
   } else if (cur > 0 && !canAdd) {
-//    console.log("Skipping:", cur)
-    arr[idx] = 0
-    search(arr, possibleAdd, false, idx + 1)
+    // positive and can't add
+    search(arr, nums, false, idx + 1)
   } else if (cur > 0 && canAdd) {
-//    console.log("Adding:", cur)
-    possibleAdd.push(cur)
-    search(arr, possibleAdd, true, idx + 1)
+    // positive and can add
+    nums.push(cur)
+    search(arr, nums, true, idx + 1)
   } else if (cur < 0 && !canAdd) {
-//    console.log("Exit:", cur)
-    search(arr, possibleAdd, true, idx + 1)
+    // negative and can't add
+    search(arr, nums, true, idx + 1)
   }
 
-//  console.log(possibleAdd)
   return possibleAdd
 }
 
