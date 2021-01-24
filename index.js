@@ -4,7 +4,7 @@ function largestSubarraySum(arr) {
   if (arr[0] < 0) {
     arr.shift()
     largestSubarraySum(arr)
-  } else if (arr[arr.length - 1] < 0) {
+  } else if (arr[arr.length - 2] < 0) {
     arr.pop()
     largestSubarraySum(arr)
   }
