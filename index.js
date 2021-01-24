@@ -18,6 +18,7 @@ function search(arr, nums, canAdd, idx) {
       search(arr, nums, false, idx + 1)
     } else {
       nums.push(cur)
+      search(arr, nums, true, idx + 1)
     }
   } else {
       search(arr, nums, true, idx + 1)
