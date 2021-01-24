@@ -1,14 +1,14 @@
 function largestSubarraySum(arr) {
   let re = /(-.)/
   console.log(arr)
-  return search(arr, re)
+  return search(arr, re, 0)
 
 }
 
-function search(arr, re) {
+function search(arr, re, idx) {
     let x = arr.join(" ").replace(re, 0).split(" ")
     console.log(x)
-    if (Number(x[0]) < 0) {
+    if (Number(x[idx]) < 0) {
       x.shift()
       console.log("ee", x)
       return search(x, re)
