@@ -14,21 +14,21 @@ function search(arr, nums, canAdd, idx) {
   let next = arr[idx + 1]
   let isNeg = cur < 0
 
-  if ((cur < 0 && canAdd)) {
+  if ((isNeg && canAdd)) {
     // negative and can add
     if (arr.length - 1 == idx) {
       nums.push(cur)
     } else {
       search(arr, nums, false, idx + 1)
     }
-  } else if (cur > 0 && !canAdd) {
+  } else if (!isNeg 0 && !canAdd) {
     // positive and can't add
     search(arr, nums, false, idx + 1)
-  } else if (cur > 0 && canAdd) {
+  } else if (!isNeg && canAdd) {
     // positive and can add
     nums.push(cur)
     search(arr, nums, true, idx + 1)
-  } else if (cur < 0 && !canAdd) {
+  } else if (isNeg && !canAdd) {
     // negative and can't add
     search(arr, nums, true, idx + 1)
   }
