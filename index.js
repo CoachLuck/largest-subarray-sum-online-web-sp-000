@@ -1,6 +1,6 @@
 function largestSubarraySum(arr) {
   console.log(arr)
-  return search(arr, [], true, 0)
+  return search(arr, [], true, 0).reduce((a,b) => { a + b})
 
 }
 
