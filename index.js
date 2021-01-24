@@ -19,6 +19,9 @@ function search(arr, canAdd, idx) {
   } else if (cur > 0 && canAdd) {
     console.log("adding:", cur)
   }
+  else if (cur < 0 && !canAdd) {
+    search(arr, true, idx + 1)
+  }
 }
 
 // function search(arr, re, idx) {
