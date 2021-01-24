@@ -8,7 +8,7 @@ function largestSubarraySum(arr) {
 function search(arr, re, idx) {
     let x = arr.join(" ").replace(re, 0).split(" ")
     console.log(x)
-    if (Number(x[idx]) < 0) {
+    if (x[idx] < 0) {
       x.shift()
       console.log("ee", x)
       search(x, re)
