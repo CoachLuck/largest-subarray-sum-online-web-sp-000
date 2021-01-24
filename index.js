@@ -12,7 +12,10 @@ function search(arr, canAdd, idx) {
   let possibleAdd = []
   if ((cur < 0 && canAdd)) {
     console.log("Odd enter:", cur)
-    return (arr.length - 1 == idx) ? possibleAdd.push(cur) : search(arr, false, idx + 1)
+    if (arr.length - 1 == idx) {
+      possibleAdd.push(cur)
+    }
+    search(arr, false, idx + 1)
   } else if (cur > 0 && !canAdd) {
     console.log("Skipping:", cur)
     arr[idx] = 0
