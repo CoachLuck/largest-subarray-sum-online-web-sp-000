@@ -18,6 +18,7 @@ function search(arr, canAdd, idx) {
   } else if (cur > 0 && canAdd) {
     console.log("Adding:", cur)
   } else if (cur < 0 && !canAdd) {
+    console.log("Exit:", cur)
     search(arr, true, idx + 1)
   }
 }
