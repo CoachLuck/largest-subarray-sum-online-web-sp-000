@@ -8,10 +8,11 @@ function largestSubarraySum(arr) {
 function search(arr, re, idx) {
     let x = arr.join(" ").replace(re, 0).split(" ")
     if (idx + 1 == arr.length) return arr
-    console.log("X: ", x)
+    console.log("IDX: ", idx)
     if (parseInt(x[idx]) <= 0) {
+      x.shift()
       console.log("ee", x)
-      return search(x.slice(0, idx + 1), re, idx)
+      return search(x, re, idx)
     } else {
       return search(x, re, idx + 1)
     }
