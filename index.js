@@ -33,7 +33,7 @@ function search(arr, nums, canAdd, idx) {
     search(arr, possibleAdd, true, idx + 1)
   }
 
-  console.log(possibleAdd)
+//  console.log(possibleAdd)
   return possibleAdd
 }
 
