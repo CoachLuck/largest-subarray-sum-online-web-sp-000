@@ -1,8 +1,14 @@
 function largestSubarraySum(arr) {
-  arr = arr.filter(x => { return x > -1 })
-  arr.sort()
-  return arr.reduce((t, n) => { return t + n} )
+  let i = 0;
+  if (arr[0] < 0) {
+    arr.shift()
+  }
+  if (arr[arr.length - 1] < 0) {
+    arr.pop()
+  }
+
+  return arr;
 }
 
-		let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
+let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
 console.log(largestSubarraySum(array))
