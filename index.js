@@ -12,8 +12,7 @@ function search(arr, canAdd, idx) {
   if ((cur < 0 && canAdd)) {
     console.log("Odd enter:", cur)
     search(arr, false, idx + 1)
-  }
-  else if (cur > 0 && !canAdd) {
+  } else if (cur > 0 && !canAdd) {
     console.log("Skipping:", cur)
     search(arr, false, idx + 1)
   } else if (cur > 0 && canAdd) {
