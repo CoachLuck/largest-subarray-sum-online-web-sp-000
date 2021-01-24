@@ -1,6 +1,6 @@
 function largestSubarraySum(arr) {
   arr.sort()
-  arr = arr.filter(e => {e > -1})
+  arr.filter(e => {e > -1})
   return arr
 }
 
