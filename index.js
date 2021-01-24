@@ -13,7 +13,7 @@ function search(arr, re, idx) {
       console.log("ee", x)
       return search(x, re, idx)
     } else {
-
+      return search(x, re, idx + 1)
     }
     console.log("Final: ", x)
 }
