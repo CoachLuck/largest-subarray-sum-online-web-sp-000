@@ -1,9 +1,9 @@
 function largestSubarraySum(arr) {
-  console.log(arr)
+//  console.log(arr)
   let x = search(arr, [], true, 0)
-  console.log("Search: ", x)
+//  console.log("Search: ", x)
   let sum = x.reduce((a,b) => a + b )
-  console.log("Sum: ", sum)
+//  console.log("Sum: ", sum)
   return sum
 }
 
@@ -14,22 +14,22 @@ function search(arr, nums, canAdd, idx) {
   let next = arr[idx + 1]
   let possibleAdd = nums
   if ((cur < 0 && canAdd)) {
-    console.log("Odd enter:", cur)
+//    console.log("Odd enter:", cur)
     if (arr.length - 1 == idx) {
       possibleAdd.push(cur)
     } else {
       search(arr, possibleAdd, false, idx + 1)
     }
   } else if (cur > 0 && !canAdd) {
-    console.log("Skipping:", cur)
+//    console.log("Skipping:", cur)
     arr[idx] = 0
     search(arr, possibleAdd, false, idx + 1)
   } else if (cur > 0 && canAdd) {
-    console.log("Adding:", cur)
+//    console.log("Adding:", cur)
     possibleAdd.push(cur)
     search(arr, possibleAdd, true, idx + 1)
   } else if (cur < 0 && !canAdd) {
-    console.log("Exit:", cur)
+//    console.log("Exit:", cur)
     search(arr, possibleAdd, true, idx + 1)
   }
 
