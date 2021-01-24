@@ -17,6 +17,8 @@ function search(arr, canAdd, idx) {
     search(arr, canAdd, idx + 1)
   }
 
+  console.log(cur)
+
 }
 
 // function search(arr, re, idx) {
