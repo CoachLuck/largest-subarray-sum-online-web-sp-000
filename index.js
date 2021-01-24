@@ -12,12 +12,10 @@ function search(arr, canAdd, idx) {
 
   if ((cur < 0 && canAdd)) {
     console.log(cur)
-    console.log(arr)
     search(arr, false, idx + 1)
   }
   else if (cur > 0 && !canAdd) {
     console.log(cur)
-    console.log(arr)
     search(arr, canAdd, idx + 1)
   }
 }
