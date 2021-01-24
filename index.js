@@ -1,16 +1,19 @@
 function largestSubarraySum(arr) {
   let i = 0;
   let inNeg = false
+  let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     if (!inNeg && arr[i] < 0) {
       inNeg = true
     } else if (inNeg && arr[i] < 0) {
       inNeg = false
+    } else {
+      sum += arr[i]
     }
 
   }
 
-  return arr.reduce((a,b) => { return a + b});
+  return sum
 }
 
 		let array = [1, 100, 4, 15, 9, 30]
