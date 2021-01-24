@@ -2,7 +2,6 @@ function largestSubarraySum(arr) {
   let re = /(-.)/
   console.log(arr.join(" ").split(re))
 
-  return sum
 }
 
 function search(arr, idx) {
