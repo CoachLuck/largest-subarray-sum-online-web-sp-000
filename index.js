@@ -1,7 +1,7 @@
 function largestSubarraySum(arr) {
   arr.sort()
   arr = arr.filter(x => { return x > -1 })
-  return arr
+  return arr.reduce()
 }
 
 let array = [1, 100, 4, 15, 9, 30]
