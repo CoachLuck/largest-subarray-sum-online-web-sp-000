@@ -9,7 +9,7 @@ function search(arr, re, idx) {
     let x = arr.join(" ").replace(re, 0).split(" ")
     console.log("X: ", x)
     console.log(x[idx])
-    if (parseInt(x[idx]) < 0) {
+    if (parseInt(x[idx]) <= 0) {
       x.shift()
       console.log("ee", x)
       search(x, re)
