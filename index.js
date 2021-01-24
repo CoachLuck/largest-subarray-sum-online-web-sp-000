@@ -1,12 +1,10 @@
 function largestSubarraySum(arr) {
   let i = 0;
   if (arr.length == 0) return 0;
-  if (arr[1] < 0) {
-    arr.shift()
+  if (arr[0] < 0) {
     arr.shift()
     largestSubarraySum(arr)
-  } else if (arr[arr.length - 2] < 0) {
-    arr.pop()
+  } else if (arr[arr.length - 1] < 0) {
     arr.pop()
     largestSubarraySum(arr)
   }
