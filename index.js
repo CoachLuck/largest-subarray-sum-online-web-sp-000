@@ -30,6 +30,7 @@ function search(arr, nums, canAdd, idx) {
     search(arr, possibleAdd, true, idx + 1)
   }
 
+  return possibleAdd
   console.log(possibleAdd)
 }
 
