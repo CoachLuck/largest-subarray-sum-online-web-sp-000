@@ -9,6 +9,7 @@ function search(arr, canAdd, idx) {
   let prev = arr[idx - 1]
   let cur = arr[idx]
   let next = arr[idx + 1]
+  let possibleAdd = []
   if ((cur < 0 && canAdd)) {
     console.log("Odd enter:", cur)
     search(arr, false, idx + 1)
@@ -18,6 +19,7 @@ function search(arr, canAdd, idx) {
     search(arr, false, idx + 1)
   } else if (cur > 0 && canAdd) {
     console.log("Adding:", cur)
+    possibleAdd.push(cur)
     search(arr, true, idx + 1)
   } else if (cur < 0 && !canAdd) {
     console.log("Exit:", cur)
