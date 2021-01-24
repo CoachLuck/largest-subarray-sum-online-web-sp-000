@@ -2,7 +2,6 @@ function largestSubarraySum(arr) {
   let i = 0;
   let inNeg = false
   let sum = 0;
-  arr.sort()
   for (let i = 0; i < arr.length; i++) {
     if (!inNeg && arr[i] < 0) {
       inNeg = true
