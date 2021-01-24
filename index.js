@@ -13,20 +13,6 @@ function search(arr, nums, canAdd, idx) {
   let cur = arr[idx]
   let next = arr[idx + 1]
   let isNeg = cur < 0
-  if (canAdd) {
-    if (isNeg) {
-      if (arr.length - 1 == idx) {
-        nums.push(cur)
-      } else {
-        search(arr, nums, false, idx + 1)
-      }
-    } else {
-      nums.push(cur)
-      search(arr, nums, true, idx + 1)
-    }
-  } else {
-      search(arr, nums, true, idx + 1)
-  }
 
   if ((cur < 0 && canAdd)) {
     // negative and can add
