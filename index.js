@@ -11,7 +11,7 @@ function largestSubarraySum(arr) {
     largestSubarraySum(arr)
   }
 
-  return arr;
+  return arr.reduce((a,b) => return a + b);
 }
 
 let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
