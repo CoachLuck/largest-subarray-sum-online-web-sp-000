@@ -12,26 +12,37 @@ function search(arr, nums, canAdd, idx) {
   let prev = arr[idx - 1]
   let cur = arr[idx]
   let next = arr[idx + 1]
-  if ((cur < 0 && canAdd)) {
-    // negative and can add
-    if (arr.length - 1 == idx) {
-      nums.push(cur)
-    } else {
+  let isNeg = cur < 0
+  if (canAdd) {
+    if (isNeg) {
       search(arr, nums, false, idx + 1)
+    } else {
+      nums.push(cur)
     }
-  } else if (cur > 0 && !canAdd) {
-    // positive and can't add
-    search(arr, nums, false, idx + 1)
-  } else if (cur > 0 && canAdd) {
-    // positive and can add
-    nums.push(cur)
-    search(arr, nums, true, idx + 1)
-  } else if (cur < 0 && !canAdd) {
-    // negative and can't add
-    search(arr, nums, true, idx + 1)
+  } else {
+      search(arr, nums, true, idx + 1)
   }
 
-  return possibleAdd
+  // if ((cur < 0 && canAdd)) {
+  //   // negative and can add
+  //   if (arr.length - 1 == idx) {
+  //     nums.push(cur)
+  //   } else {
+  //     search(arr, nums, false, idx + 1)
+  //   }
+  // } else if (cur > 0 && !canAdd) {
+  //   // positive and can't add
+  //   search(arr, nums, false, idx + 1)
+  // } else if (cur > 0 && canAdd) {
+  //   // positive and can add
+  //   nums.push(cur)
+  //   search(arr, nums, true, idx + 1)
+  // } else if (cur < 0 && !canAdd) {
+  //   // negative and can't add
+  //   search(arr, nums, true, idx + 1)
+  // }
+
+  return nums
 }
 
 let array = [-2, -3, 4, -1, -2, 1, 5, -3]
