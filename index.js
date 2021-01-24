@@ -34,26 +34,5 @@ function search(arr, nums, canAdd, idx) {
   return possibleAdd
 }
 
-// function search(arr, re, idx) {
-//     let possibleAdd = []
-//     let negatives = []
-//     arr.each (num => {
-//       if (negatives.length > 0) {
-//         if (num < 0) {
-//           negatives.push(num)
-//         } else {
-//           possibleAdd.push(num)
-//         }
-//       }
-//       else {
-//           if (num < 0) {
-//             negatives.push(num)
-//           } else {
-//             possibleAdd.push(num)
-//           }
-//       }
-//     })
-// }
-
 let array = [-2, -3, 4, -1, -2, 1, 5, -3]
 console.log(largestSubarraySum(array))
