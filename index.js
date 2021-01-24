@@ -4,6 +4,7 @@ function largestSubarraySum(arr) {
   console.log("Search: ", x)
   let sum = x.reduce((a,b) => { a + b })
   console.log("Sum: ", x.reduce((a,b) => a + b ))
+  return sum
 }
 
 
