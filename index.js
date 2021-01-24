@@ -7,17 +7,21 @@ function largestSubarraySum(arr) {
       inNeg = true
       console.log("Entered: ", arr[i])
     } else if (inNeg && arr[i] > 0) {
-      continue;
+      
     } else if (inNeg && arr[i] < 0) {
       inNeg = false
     } else {
-      consoel.log("adding: ", arr[i])
+      console.log("adding: ", arr[i])
       sum += arr[i]
     }
 
   }
 
   return sum
+}
+
+function search(arr, idx) {
+  if (arr[0])
 }
 
 		let array = [-3, 1, 100, 4, 15, 9, 30, -1]
