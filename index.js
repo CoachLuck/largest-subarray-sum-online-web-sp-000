@@ -30,5 +30,5 @@ function search(arr, idx) {
   }
 }
 
-		let array = [-3, 1, 100, 4, 15, 9, 30, -1]
+		let array = [-2, -3, 4, -1, -2, 1, 5, -3]
 console.log(largestSubarraySum(array))
