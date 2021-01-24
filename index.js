@@ -12,23 +12,22 @@ function search(arr, nums, canAdd, idx) {
   let prev = arr[idx - 1]
   let cur = arr[idx]
   let next = arr[idx + 1]
-  const isNeg = cur < 0
 
-  if ((isNeg && canAdd)) {
+  if ((cur < 0 && canAdd)) {
     // negative and can add
     if (arr.length - 1 == idx) {
       nums.push(cur)
     } else {
       search(arr, nums, false, idx + 1)
     }
-  } else if (!isNeg && !canAdd) {
+  } else if (cur > 0 && !canAdd) {
     // positive and can't add
     search(arr, nums, false, idx + 1)
-  } else if (!isNeg && canAdd) {
+  } else if (cur > 0 && canAdd) {
     // positive and can add
     nums.push(cur)
     search(arr, nums, true, idx + 1)
-  } else if (isNeg && !canAdd) {
+  } else if (cur < 0 && !canAdd) {
     // negative and can't add
     search(arr, nums, true, idx + 1)
   }
