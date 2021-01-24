@@ -21,7 +21,7 @@ function search(arr, nums, canAdd, idx) {
     } else {
       search(arr, nums, false, idx + 1)
     }
-  } else if (!isNeg 0 && !canAdd) {
+  } else if (!isNeg && !canAdd) {
     // positive and can't add
     search(arr, nums, false, idx + 1)
   } else if (!isNeg && canAdd) {
