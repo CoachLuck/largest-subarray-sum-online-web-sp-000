@@ -9,14 +9,15 @@ function search(arr, canAdd, idx) {
   let prev = arr[idx - 1]
   let cur = arr[idx]
   let next = arr[idx + 1]
-
   if ((cur < 0 && canAdd)) {
-    console.log(cur)
+    console.log("Odd enter:"cur)
     search(arr, false, idx + 1)
   }
   else if (cur > 0 && !canAdd) {
-    console.log(cur)
-    search(arr, canAdd, idx + 1)
+    console.log("Skipping:", cur)
+    search(arr, false, idx + 1)
+  } else if (cur > 0 && canAdd) {
+    console.log("adding:", cur)
   }
 }
 
