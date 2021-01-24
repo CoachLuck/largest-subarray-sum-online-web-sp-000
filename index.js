@@ -14,6 +14,7 @@ function search(arr, canAdd, idx) {
     search(arr, false, idx + 1)
   } else if (cur > 0 && !canAdd) {
     console.log("Skipping:", cur)
+    arr[idx] = 0
     search(arr, false, idx + 1)
   } else if (cur > 0 && canAdd) {
     console.log("Adding:", cur)
@@ -22,6 +23,8 @@ function search(arr, canAdd, idx) {
     console.log("Exit:", cur)
     search(arr, true, idx + 1)
   }
+
+  console.log(arr)
 }
 
 // function search(arr, re, idx) {
