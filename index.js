@@ -11,7 +11,9 @@ function search(arr, re, idx) {
     if (parseInt(x[idx]) <= 0) {
       x.shift()
       console.log("ee", x)
-      search(x, re)
+      search(x, re, idx + 1)
+    } else {
+
     }
     console.log("Final: ", x)
 }
