@@ -1,6 +1,6 @@
 function largestSubarraySum(arr) {
   let re = /(-.)/
-  console.log(arr.join(" ").matchAll(re))
+  console.log(arr.join(" ").replace(re, ""))
 
 }
 
