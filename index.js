@@ -16,7 +16,7 @@ function search(arr, canAdd, idx) {
   if (cur > 0 && !canAdd) {
     search(arr, canAdd, idx + 1)
   }
-  
+
 }
 
 // function search(arr, re, idx) {
@@ -29,7 +29,7 @@ function search(arr, canAdd, idx) {
 //         } else {
 //           possibleAdd.push(num)
 //         }
-//       } 
+//       }
 //       else {
 //           if (num < 0) {
 //             negatives.push(num)
