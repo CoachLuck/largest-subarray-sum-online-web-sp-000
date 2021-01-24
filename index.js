@@ -1,5 +1,5 @@
 function largestSubarraySum(arr) {
-  var max = Math.max(arr)
+  var max = Math.max.apply(null, arr)
   return max
 }
 
