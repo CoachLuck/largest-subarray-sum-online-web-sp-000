@@ -6,12 +6,12 @@ function largestSubarraySum(arr) {
 }
 
 function search(arr, re) {
-    let x = arr.join(" ").replaceAll(re, '0').split(" ")
+    let x = arr.join(" ").replace(re, '0').split(" ")
     if (x[0] < 0) {
       return search(x, re)
     }
     console.log(x)
 }
 
-		let array = [-2, -3, 4, -1, -2, 1, 5, -3]
+let array = [-2, -3, 4, -1, -2, 1, 5, -3]
 console.log(largestSubarraySum(array))
