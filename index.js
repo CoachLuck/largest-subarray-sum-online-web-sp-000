@@ -1,26 +1,7 @@
 function largestSubarraySum(arr) {
-  let i = 0;
-  let inNeg = false
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (!inNeg && arr[i] < 0) {
-      inNeg = true
-      console.log("Entered: ", arr[i])
-    } else if (inNeg && arr[i] > 0) {
-      console.log("adding: ", arr[i])
-      sum += arr[i]
-    } else if (inNeg && arr[i] < 0) {
-      console.log("Exited:", arr[i])
-      inNeg = false
-    } else {
-      console.log("adding: ", arr[i])
-      sum += arr[i]
-    }
-
-  }
-
-
-  console.log("SUM:",sum)
+  let re = /(-.)/
+  console.log(arr.split(re))
+  
   return sum
 }
 
