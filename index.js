@@ -1,6 +1,15 @@
 function largestSubarraySum(arr) {
   let i = 0;
-  if (arr.length == 0) return 0;
+  let inNeg = false
+  for (let i = 0; i < arr.length; i++) {
+    if (!inNeg && arr[i] < 0) {
+      inNeg = true
+    } else if (inNeg && arr[i] < 0) {
+      inNeg = false
+    }
+
+  }
+
   return arr.reduce((a,b) => { return a + b});
 }
 
