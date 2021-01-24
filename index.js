@@ -2,9 +2,10 @@ function largestSubarraySum(arr) {
   let i = 0;
   if (arr[0] < 0) {
     arr.shift()
-  }
-  if (arr[arr.length - 1] < 0) {
+  } else if (arr[arr.length - 1] < 0) {
     arr.pop()
+  } else {
+    largestSubarraySum(arr)
   }
 
   return arr;
