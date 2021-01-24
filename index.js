@@ -6,6 +6,7 @@ function largestSubarraySum(arr) {
     largestSubarraySum(arr)
   } else if (arr[arr.length - 2] < 0) {
     arr.pop()
+    arr.pop()
     largestSubarraySum(arr)
   }
 
