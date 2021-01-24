@@ -13,7 +13,7 @@ function search(arr, re, idx) {
       console.log("ee", x)
       search(x, re)
     }
-    console.log(x)
+    console.log("Final: ", x)
 }
 
 let array = [-2, -3, 4, -1, -2, 1, 5, -3]
