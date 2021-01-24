@@ -7,6 +7,7 @@ function largestSubarraySum(arr) {
       inNeg = true
       console.log("Entered: ", arr[i])
     } else if (inNeg && arr[i] > 0) {
+      console.log("adding: ", arr[i])
       sum += arr[i]
     } else if (inNeg && arr[i] < 0) {
       console.log("Exited:", arr[i])
@@ -18,6 +19,8 @@ function largestSubarraySum(arr) {
 
   }
 
+
+  console.log("SUM:",sum)
   return sum
 }
 
