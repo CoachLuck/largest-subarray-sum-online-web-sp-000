@@ -3,8 +3,8 @@ function largestSubarraySum(arr) {
   if (arr.length == 0) return 0;
   if (arr[0] < 0) {
     arr.shift()
-  }
-  if (arr[arr.length - 1] < 0) {
+    largestSubarraySum(arr)
+  } else if (arr[arr.length - 1] < 0) {
     arr.pop()
   }
 
