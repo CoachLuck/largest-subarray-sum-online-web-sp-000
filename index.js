@@ -4,5 +4,5 @@ function largestSubarraySum(arr) {
   return arr
 }
 
-let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
+let array = [1, 100, 4, 15, 9, 30]
 console.log(largestSubarraySum(array))
