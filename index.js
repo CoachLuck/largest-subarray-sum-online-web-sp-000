@@ -26,7 +26,7 @@ function search(arr, canAdd, idx) {
     search(arr, true, idx + 1)
   }
 
-  console.log(arr)
+  console.log(possibleAdd)
 }
 
 // function search(arr, re, idx) {
