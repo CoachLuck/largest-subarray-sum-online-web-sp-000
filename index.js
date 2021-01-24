@@ -4,5 +4,5 @@ function largestSubarraySum(arr) {
   arr[maxi] = -Infinity; // replace max in the array with -infinity
   var secondMax = Math.max.apply(null, arr); // get the new max
   arr[maxi] = max;
-  return secondMax + max;
+  return max + secondMax;
 }
