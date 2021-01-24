@@ -21,7 +21,9 @@ function largestSubarraySum(arr) {
 }
 
 function search(arr, idx) {
-  if (arr[0])
+  if (arr[0]) {
+
+  }
 }
 
 		let array = [-3, 1, 100, 4, 15, 9, 30, -1]
