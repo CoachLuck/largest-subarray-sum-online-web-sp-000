@@ -11,7 +11,7 @@ function search(arr, re, idx) {
     if (Number(x[idx]) < 0) {
       x.shift()
       console.log("ee", x)
-      return search(x, re)
+      search(x, re)
     }
     console.log(x)
 }
