@@ -10,9 +10,8 @@ function search(arr, re, idx) {
     if (idx + 1 == arr.length) return arr
     console.log("X: ", x)
     if (parseInt(x[idx]) <= 0) {
-      x.shift()
       console.log("ee", x)
-      return search(x, re, idx)
+      return search(x.slice(0, idx + 1), re, idx)
     } else {
       return search(x, re, idx + 1)
     }
