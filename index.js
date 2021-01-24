@@ -6,9 +6,9 @@ function largestSubarraySum(arr) {
     largestSubarraySum(arr)
   } else if (arr[arr.length - 1] < 0) {
     arr.pop()
+    largestSubarraySum(arr)
   }
 
-  largestSubarraySum(arr)
   return arr;
 }
 
