@@ -9,6 +9,7 @@ function search(arr, re) {
     let x = arr.join(" ").replace(re, 0).split(" ")
     if (Number(x[0]) < 0) {
       x.shift()
+      console.log("ee", x)
       return search(x, re)
     }
     console.log(x)
