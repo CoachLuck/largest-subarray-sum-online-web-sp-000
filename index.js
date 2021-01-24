@@ -8,6 +8,8 @@ function largestSubarraySum(arr) {
       console.log("Entered: ", arr[i])
     } else if (inNeg && arr[i] < 0) {
       inNeg = false
+    } else if (inNeg && arr[i] > 0){
+      inNeg = true
     } else {
       sum += arr[i]
     }
