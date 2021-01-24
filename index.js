@@ -15,7 +15,7 @@ function search(arr, canAdd, idx) {
     console.log(arr)
     search(arr, false, idx + 1)
   }
-  if (cur > 0 && !canAdd) {
+  else if (cur > 0 && !canAdd) {
     console.log(cur)
     console.log(arr)
     search(arr, canAdd, idx + 1)
