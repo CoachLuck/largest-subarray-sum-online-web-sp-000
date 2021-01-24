@@ -12,7 +12,7 @@ function search(arr, nums, canAdd, idx) {
   let prev = arr[idx - 1]
   let cur = arr[idx]
   let next = arr[idx + 1]
-  let isNeg = cur < 0
+  const isNeg = cur < 0
 
   if ((isNeg && canAdd)) {
     // negative and can add
