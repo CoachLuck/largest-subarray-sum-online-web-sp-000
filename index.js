@@ -10,7 +10,7 @@ function search(arr, canAdd, idx) {
   let cur = arr[idx]
   let next = arr[idx + 1]
   if ((cur < 0 && canAdd)) {
-    console.log("Odd enter:"cur)
+    console.log("Odd enter:", cur)
     search(arr, false, idx + 1)
   }
   else if (cur > 0 && !canAdd) {
